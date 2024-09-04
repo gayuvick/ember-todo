@@ -37,7 +37,7 @@ export const BaseUrlHandler = {
     // Prepend base URL
     const updatedRequest = {
       ...request,
-      url: `http://localhost:3000${url}` // Adjust the base URL as needed
+      url: `https://ember-server.vercel.app${url}` // Adjust the base URL as needed
     };
 
     return next(updatedRequest);

@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     margin: 0;
-    padding: 0;
+    padding: 0 10%;
   }
   
   .navbar {
-    background-color: #4A4E69; /* Deep Slate Blue */
+    background-color: #4A4E69; 
     padding: 15px;
   }
   
@@ -23,7 +23,7 @@ body {
   }
   
   .navbar ul li a {
-    color: #9A8C98; /* Warm Gray */
+    color: #9A8C98;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -47,7 +47,8 @@ body {
     margin: 50px auto;
     box-sizing: border-box;
   }
-  
+
+ 
   h1 {
     text-align: center;
     color: #333;
@@ -64,7 +65,7 @@ body {
   
   button {
     padding: 10px 20px;
-    background-color: #add8e6; /* Pale Blue Background */
+    background-color: #add8e6; 
     border: none;
     color: white;
     border-radius: 4px;
@@ -74,7 +75,7 @@ body {
   }
   
   button:hover {
-    background-color: #87ceeb; /* Slightly darker blue for hover */
+    background-color: #87ceeb; 
   }
   
   ul {
@@ -87,7 +88,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #fdf0d5; /* Pale Orange for list items */
+    background-color: #fdf0d5; 
     border-radius: 4px;
     margin-bottom: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -99,10 +100,63 @@ body {
   
   li button {
     margin-left: auto;
-    background-color: #ffcccb; /* Pale Red for delete button */
+    background-color: #ffcccb; 
   }
   
   li button:hover {
-    background-color: #e57373; /* Darker red for hover */
+    background-color: #e57373; 
   }
+  .container{
+    padding:20px;
+  }
+
+  /* To-Do Input Form */
+form {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10% auto;
+    max-width: 400px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333333;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="checkbox"] {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+
   

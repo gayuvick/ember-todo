@@ -18,11 +18,11 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://ember-server.vercel.app',
   };
 
   if (environment === 'development') {
-    ENV.apiHost = 'http://localhost:3000';
+    ENV.apiHost = 'https://ember-server.vercel.app';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
