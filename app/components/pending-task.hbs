@@ -1,0 +1,18 @@
+<div class="pending-tasks">
+  <h2>Pending Tasks</h2>
+  
+  {{#if this.tasks.length}}
+    <ul>
+      {{#each this.tasks as |task|}}
+        <li>
+          <strong>{{task.description}}</strong> - Due: {{task.dueDate}} 
+          <button {{on "click" (fn this.completeTask task)}}>Complete</button>
+          <button {{on "click" (fn this.deleteTask task)}}>Delete</button>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No pending tasks!</p>
+  {{/if}}
+</div>
+

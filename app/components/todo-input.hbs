@@ -1,0 +1,21 @@
+<form {{on "submit" this.submitForm}}>
+  <div>
+    <label for="title">Title:</label>
+     <Input @value={{this.title}} />
+    {{!-- <input type="text" id="title" value={{this.title}} {{on "input" this.updateTitle}} /> --}}
+  </div>
+  
+  <div>
+    <label for="dueDate">Due Date:</label>
+     <Input @type="date" @value={{this.dueDate}}/>
+    {{!-- <input type="date" id="dueDate" value={{this.dueDate}} {{on "input" this.updateDueDate}} /> --}}
+  </div>
+  
+  <div>
+    <label for="isCompleted">Completed:</label>
+     <Input @type="checkbox" @checked={{this.isCompleted}} />
+    {{!-- <input type="checkbox" id="isCompleted" checked={{this.isCompleted}} {{on "change" this.updateIsCompleted}} /> --}}
+  </div>
+  
+  <button type="submit">Add Task</button>
+</form>
