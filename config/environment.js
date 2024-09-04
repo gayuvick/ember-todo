@@ -43,6 +43,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.apiHost = 'https://ember-server.vercel.app';
     // here you can enable a production-specific feature
   }
 

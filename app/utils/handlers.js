@@ -15,31 +15,46 @@
 export const BaseUrlHandler = {
   request(context, next) {
     const { request } = context;
+    // console.log(JSON.parse(request.data) , "data");
+    // console.log("request coming to utils handler" , request)
 
     // For `createRecord`, `updateRecord`, `deleteRecord` operations, make sure URLs are correctly set
     let url = request.url;
+    let method = 'GET'; // Default method for queries
+    let headers = new Headers({
+      'Content-Type': 'application/json',
+    });
     
     // Handle different types of operations
     if (request.op === 'createRecord') {
-      // Example: Add endpoint path if needed
-      url = `/api/tasks`; // Adjust path based on your backend structure
+      url = `/api/tasks`; // Path for creating a record
+      method = 'POST'; // Method for creating a record
     } else if (request.op === 'updateRecord') {
-      // Handle update record, e.g., /api/tasks/:id
-      url = `/api/tasks/${request.data.id}`;
+      url = `/api/tasks/${request.data.id}`; // Path for updating a record
+      method = 'PUT'; // Method for updating a record
     } else if (request.op === 'deleteRecord') {
-      // Handle delete record, e.g., /api/tasks/:id
-      url = `/api/tasks/${request.data.id}`;
-    } else if (request.op === 'query') {
-      // Handle query operation
-      url = `/api/tasks`; // This might be a general endpoint for fetching tasks
+      url = `/api/tasks/${request.data.id}`; // Path for deleting a record
+      method = 'DELETE'; // Method for deleting a record
+    } else if (request.op === 'findAll') {
+      url = `/api/tasks`; // Path for querying records
+      method = 'GET';
     }
+    else if(request.op === "findRecord"){
+      url = `/api/tasks${request.data.id}`;
+      method = 'GET';
+    }
+
+    // console.log("url after processing based on operation" , url)
 
     // Prepend base URL
     const updatedRequest = {
       ...request,
-      url: `https://ember-server.vercel.app${url}` // Adjust the base URL as needed
+      url: `http://localhost:3000${url}`, // Base URL for the server
+      method: method, // Set the appropriate method
+      headers: headers, // Set headers
+     
     };
-
+// console.log("changed request now based for store" , updatedRequest)
     return next(updatedRequest);
   }
 };

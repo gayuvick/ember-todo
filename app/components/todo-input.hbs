@@ -1,7 +1,7 @@
 <form {{on "submit" this.submitForm}}>
   <div>
-    <label for="title">Title:</label>
-     <Input @value={{this.title}} />
+    <label for="title">Description:</label>
+     <Input required @value={{this.description}} />
     {{!-- <input type="text" id="title" value={{this.title}} {{on "input" this.updateTitle}} /> --}}
   </div>
   
@@ -13,7 +13,7 @@
   
   <div>
     <label for="isCompleted">Completed:</label>
-     <Input @type="checkbox" @checked={{this.isCompleted}} />
+     <Input  @type="checkbox" @checked={{this.completed}} />
     {{!-- <input type="checkbox" id="isCompleted" checked={{this.isCompleted}} {{on "change" this.updateIsCompleted}} /> --}}
   </div>
   
