@@ -13,7 +13,7 @@
              {{else}}
               <button {{on "click" (fn this.completeTask task)}}>Complete</button>
           {{/if}}
-          <button {{on "click" (fn this.deleteTask task)}}>Delete</button>
+          {{!-- <button {{on "click" (fn this.deleteTask task)}}>Delete</button> --}}
         </li>
       {{/each}}
     </ul>

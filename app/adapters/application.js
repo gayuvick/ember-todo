@@ -1,5 +1,6 @@
-import JSONAPIAdapter from '@ember-data/adapter/json-api';
+// app/adapters/application.js
+import JSONAdapter from '@ember-data/adapter/json-api';
 
-export default class ApplicationAdapter extends JSONAPIAdapter {
-  host = 'https://ember-server.vercel.app';
+export default class ApplicationAdapter extends JSONAdapter {
+  host = 'http://localhost:3000';
 }

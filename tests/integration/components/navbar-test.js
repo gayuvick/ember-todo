@@ -12,15 +12,6 @@ module('Integration | Component | navbar', function (hooks) {
 
     await render(hbs`<Navbar />`);
 
-    assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Navbar>
-        template block text
-      </Navbar>
-    `);
-
-    assert.dom().hasText('template block text');
+    assert.dom().hasText('Home Add Task Pending Tasks');
   });
 });
